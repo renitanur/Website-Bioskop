@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #bbb1b1;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('GOLDEN HOUR (2).PNG') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .container {
+      background-color: rgba(58, 184, 216, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left-section {
+      width: 40%;
+    }
+
+    .right-section {
+      width: 55%;
+      text-align: center;
+    }
+
+    h2 {
+      color: #070707;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .seat-selection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .seat-numbers {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .seat-number {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 8px;
+      margin: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .seat-number:hover {
+      background-color: #0056b3;
+    }
+
+    button {
+      background-color: #073a41;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 12px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <title>Pemesanan Tiket Bioskop</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-section">
+      <!-- Ganti 'GOLDEN HOUR.PNG' dengan nama gambar bioskop -->
+      <img src="cinema.png" alt="Bioskop Image" style="width: 100%; border-radius: 10px;">
+    </div>
+
+    <div class="right-section">
+      <h2>Pesan Tiket Bioskop</h2>
+      <form action="proses_pemesanan.php" method="post">
+        <label for="name">Nama Pemesan:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="date">Tanggal Pesan:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="movie">Judul Film:</label>
+        <select id="movie" name="movie" required>
+          <option value="50000">Night Swim (50.000)</option>
+          <option value="60000">The Desperate (60.000)</option>
+          <option value="55000">All Fun And Games (55.000)</option>
+          <option value="60000">The Beekeeper (60.000)</option>
+        </select>
+
+        
+
+        <label for="quantity">Jumlah Tiket:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+        <label for="total">Total Biaya:</label>
+        <input type="text" id="total" name="total" readonly>
+
+        <button type="button" onclick="calculateTotal()">Hitung Total</button>
+
+        <button type="submit">Pesan Tiket</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function selectSeat(seatNumber) {
+      document.getElementById('seat').value = seatNumber;
+    }
+
+    function calculateTotal() {
+      var quantity = document.getElementById('quantity').value;
+      var price = document.getElementById('movie').value;
+      var total = quantity * price;
+
+      document.getElementById('price').value = 'Rp ' + price;
+      document.getElementById('total').value = 'Rp ' + total;
+    }
+  </script>
+
+</body>
+</html>

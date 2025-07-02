@@ -1,0 +1,5 @@
+now playing
+theaters
+about
+history
+login/logout
