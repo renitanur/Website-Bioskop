@@ -1,14 +1,30 @@
-## Movie Seat Booking
+🎬 CINEMATE - Portal Informasi dan Pemesanan Film
+Selamat datang di CINEMATE!
+CINEMATE adalah platform berbasis web yang dirancang untuk memberikan informasi lengkap seputar film, jadwal tayang, dan layanan pemesanan tiket bioskop.
+Nikmati pengalaman menjelajah dunia perfilman secara praktis dan menyenangkan bersama kami.
 
-Display movie choices and seats in a theater to select from in order to purchase tickets
+✨ Fitur Unggulan
+🎞️ Now Playing
+Temukan berbagai film terbaru yang sedang tayang di bioskop favorit Anda, lengkap dengan sinopsis, trailer, dan jadwal penayangan.
 
-## Project Specifications
+🏛️ Theaters
+Jelajahi daftar bioskop berdasarkan lokasi dan pilih tempat nonton yang paling nyaman untuk Anda dan keluarga.
 
-- Display UI with movie select, screen, seats, legend & seat info
-- User can select a movie/price
-- User can select/deselect seats
-- User can not select occupied seats
-- Number of seats and price will update
-- Save seats, movie and price to local storage so that UI is still populated on refresh
+🔐 Login
+Masuk untuk mengakses fitur eksklusif seperti riwayat pemesanan tiket, wishlist film, dan notifikasi film favorit Anda.
 
-Design inspiration from [Dribbble](https://dribbble.com/shots/3628370-Movie-Seat-Booking)
+📩 Contact Us
+Hubungi kami dengan mudah jika Anda memiliki pertanyaan, masukan, atau kendala seputar layanan CINEMATE.
+
+🛠️ Teknologi yang Digunakan
+Frontend: HTML, CSS, JavaScript
+
+Backend: PHP
+
+Database: MySQL
+
+Framework: Bootstrap untuk tampilan responsif
+
+Carousel: Slider film berbasis jQuery
+
+Deployment: Lokal (XAMPP / Hosting PHP)
